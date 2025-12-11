@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Motor - Raihan Harley Store</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Memuat...</p>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="assets/Harley-logo.png" class="logo-img" alt="Harley Logo">
+      <div>
+        <h1>Raihan Harley Store</h1>
+        <p class="tagline">Feel The Freedom On The Road</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="cart.html">Keranjang 🛒 (<span id="cart-count">0</span>)</a>
+      <button id="music-toggle" class="btn">🔇 Musik</button>
+    </nav>
+  </header>
+
+  <main id="detail-container"></main>
+
+  <footer>
+    <p>© 2025 Raihan Harley Store</p>
+  </footer>
+
+  <audio id="bgMusic" src="highway.mp3" loop preload="none"></audio>
+
+</body>
+</html>

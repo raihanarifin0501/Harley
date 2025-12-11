@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koleksi - Raihan Harley Garage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="assets/Harley-logo.png" class="logo-img" alt="Harley Logo">
+      <div>
+        <h1>Raihan Harley Garage</h1>
+        <p class="tagline">Feel The Freedom On The Road</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="collection.html" class="active">Koleksi</a>
+      <a href="cart.html">Keranjang 🛒 (<span id="cart-count">0</span>)</a>
+      <button id="music-toggle" class="btn">🔊</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Koleksi Motor Harley Davidson</h2>
+    <p>Pilih motor impian lo, rasakan kebebasan di jalanan!</p>
+    <input type="text" id="search" placeholder="Cari model Harley..." />
+  </section>
+
+  <!-- PRODUK -->
+  <main>
+    <div class="product-container" id="productList"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Raihan Harley Garage | Ride With Pride</p>
+  </footer>
+
+  <audio id="bgMusic" src="highway.mp3" loop preload="auto"></audio>
+
+</body>
+</html>

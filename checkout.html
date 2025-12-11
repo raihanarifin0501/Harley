@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Raihan Harley Garage</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Memuat...</p>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="assets/Harley-logo.png" class="logo-img" alt="Harley Logo">
+      <div>
+        <h1>Raihan Harley Garage</h1>
+        <p class="tagline">Feel The Freedom On The Road</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="cart.html">Keranjang 🛒</a>
+      <button id="music-toggle" class="btn">🔇 Musik</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <section class="checkout-section">
+        <h3>Informasi Pribadi</h3>
+        <div class="form-group">
+          <label for="name">Nama Lengkap:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Nomor Telepon:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <h3>Opsi Pengambilan</h3>
+        <div class="form-group">
+          <label>
+            <input type="radio" name="pickup-option" value="pickup" checked> Pickup di Dealer Raihan Harley Garage
+          </label>
+          <label>
+            <input type="radio" name="pickup-option" value="delivery"> Delivery ke Alamat
+          </label>
+        </div>
+        <div class="form-group" id="address-group" style="display: none;">
+          <label for="address">Alamat Lengkap:</label>
+          <textarea id="address" name="address"></textarea>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <h3>Metode Pembayaran</h3>
+        <div class="form-group">
+          <label>
+            <input type="radio" name="payment-method" value="credit-card" checked> Kartu Kredit
+          </label>
+          <label>
+            <input type="radio" name="payment-method" value="bank-transfer"> Transfer Bank
+          </label>
+        </div>
+        <div id="credit-card-fields">
+          <div class="form-group">
+            <label for="card-number">Nomor Kartu Kredit:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+          </div>
+          <div class="form-group">
+            <label for="expiry">Tanggal Kadaluarsa (MM/YY):</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv">
+          </div>
+          <div class="form-group">
+            <label for="card-name">Nama di Kartu:</label>
+            <input type="text" id="card-name" name="card-name">
+          </div>
+        </div>
+        <div id="bank-transfer-info" style="display: none;">
+          <p>Transfer ke rekening: BCA 1234567890 a/n Raihan Harley Garage</p>
+        </div>
+      </section>
+
+      <section class="checkout-section">
+        <h3>Ringkasan Pesanan</h3>
+        <div id="order-summary"></div>
+        <div id="order-total" class="total-price"></div>
+      </section>
+
+      <div class="checkout-actions">
+        <button type="button" id="back-to-cart" class="btn secondary">← Kembali ke Keranjang</button>
+        <button type="submit" class="btn">Konfirmasi Pembelian</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Raihan Harley Garage | Ride With Pride</p>
+  </footer>
+
+  <audio id="bgMusic" src="highway.mp3" loop preload="none"></audio>
+
+</body>
+</html>

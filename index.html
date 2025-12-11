@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raihan Harley Garage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<section class="hero-slider">
+  <div class="slider-container">
+    <div class="slides">
+      <div class="slide" style="background-image: url('assets/bghero1.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/bghero2.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/bghero3.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/bghero4.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/bghero5.jpg');"></div>
+      <div class="slide" style="background-image: url('assets/bghero6.jpg');"></div>
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Raihan Harley Garage</h1>
+    <p>Feel The Freedom On The Road</p>
+  </div>
+  <div class="slide-indicators">
+    <span class="dot active" onclick="showSlide(0)"></span>
+    <span class="dot" onclick="showSlide(1)"></span>
+    <span class="dot" onclick="showSlide(2)"></span>
+    <span class="dot" onclick="showSlide(3)"></span>
+    <span class="dot" onclick="showSlide(4)"></span>
+    <span class="dot" onclick="showSlide(5)"></span>
+  </div>
+  <div class="top-controls">
+    <button id="music-toggle" class="btn">🔊</button>
+    <div id="language-switcher">
+      <button onclick="setLanguage('id')">ID</button>
+      <button onclick="setLanguage('en')">EN</button>
+    </div>
+  </div>
+</section>
+  <!-- LOADING -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Memuat...</p>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="assets/Harley-logo.png" class="logo-img" alt="Harley Logo">
+      <div>
+        <h1>Raihan Harley Garage</h1>
+        <p class="tagline">Feel The Freedom On The Road</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2 data-translate="heroTitle">Raihan Harley Garage — Where Freedom Roars!</h2>
+    <p data-translate="heroDesc">Dari suara mesin yang menggema sampai desain yang menggoda — Temukan motor impianmu dan rasakan sensasi jalanan tanpa batas.</p>
+    <a href="collection.html" class="btn hero-btn" data-translate="viewCollection">Lihat Koleksi</a>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <h2 data-translate="servicesTitle">Our Services</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3 data-translate="service1Title">Penjualan Motor</h3>
+        <p data-translate="service1Desc">Temukan berbagai model Harley-Davidson asli dengan kualitas terbaik. Kami menyediakan motor baru dan bekas yang terawat dengan baik.</p>
+        <a href="collection.html" class="btn" data-translate="learnMore">Learn More</a>
+      </div>
+      <div class="service">
+        <h3 data-translate="service2Title">Servis & Perawatan</h3>
+        <p data-translate="service2Desc">Layanan servis berkala dan perbaikan untuk menjaga motor Anda tetap prima. Tim ahli kami siap membantu dengan suku cadang asli.</p>
+        <a href="#" class="btn" data-translate="learnMore">Learn More</a>
+      </div>
+      <div class="service">
+        <h3 data-translate="service3Title">Custom & Modifikasi</h3>
+        <p data-translate="service3Desc">Ubah motor Anda menjadi unik dengan layanan custom dan modifikasi. Dari aksesoris hingga modifikasi mesin, kami wujudkan visi Anda.</p>
+        <a href="custom.html" class="btn" data-translate="learnMore">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p data-translate="footer">© 2025 Raihan Harley Garage | Ride With Pride</p>
+  </footer>
+
+  <audio id="bgMusic" src="highway.mp3" loop preload="auto"></audio>
+
+</body>
+</html>

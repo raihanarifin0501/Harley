@@ -1,0 +1,5 @@
+- [x] Update .detail-box img flex from 2 to 3 to enlarge the motorcycle photo
+- [x] Add max-width: 350px to .detail-info to narrow the specifications section
+- [x] Adjust photo to be more horizontal and match original size
+- [x] Adjust specifications section to reach the right edge without extra space
+- [ ] Test the changes by viewing the detail page in browser
